@@ -3,9 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class BiodataMahasiswa extends Model
 {
+
+	use SoftDeletes;
+
     //define nama tabel
     protected $table = "biodata_mahasiswa";
 
@@ -13,6 +17,7 @@ class BiodataMahasiswa extends Model
     protected $fillable = [
     	"name",
     	"nim",
-    	"address"
+    	"address",
+    	"foto"
     ];
 }
